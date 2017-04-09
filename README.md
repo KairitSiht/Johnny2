@@ -1,2 +1,2 @@
-# tarkvaratehnika2017K
-IDK0071 kursuse 2017. kevadsemestri ülesanded ja koodinäited
+# Johnny2
+IDK0071 kursuse 2017. kevadsemestri meeskonnaprojekt LeaveIt2Johnny
