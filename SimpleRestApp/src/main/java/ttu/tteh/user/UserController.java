@@ -25,6 +25,12 @@ public class UserController {
 	
 	@RequestMapping(value="/users", method=RequestMethod.GET)
 	public List<User> getAllUsers() {
+		List<User> users = userService.getAllUsers();
+		
+		// Remove all passwords before sharing with the user
+		for (User user : users) {
+			user.passWord = "UNDISCLOSED";
+		}
 		return userService.getAllUsers();
 	}
 	

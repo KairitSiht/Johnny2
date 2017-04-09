@@ -1,2 +1,19 @@
 <template>
+    <style>
+        .user {
+            background-color: rgba(255,255,255,0.8);
+            display: inline-block;
+            padding: 8px;
+        }
+    </style>
+    
+    
+    <div class=user repeat.for="user of userList">
+        <h2>${user.userName}</h2>
+        <p>ID: ${user.id}</p>
+        <p>Age: ${user.age}</p>
+        <p>Facebook URL: <a href="${user.url}">${user.url}</a></p>
+        <p>${user.bio}</p>
+    </div>
+    
 </template>
