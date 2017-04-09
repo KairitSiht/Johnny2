@@ -19,6 +19,9 @@ export class people{
 	}
 
 	addUser() {
+        this.userData.userName=document.getElementById("userName").value;
+        this.userData.age=document.getElementById("age").value;
+        this.userData.bio=document.getElementById("bio").value;
 		let client = new HttpClient();
 
 		client.fetch('http://localhost:8080/users/add', {

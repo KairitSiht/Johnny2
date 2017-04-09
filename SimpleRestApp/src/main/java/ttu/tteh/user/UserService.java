@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import ttu.tteh.car.Car;
-
 @Service
 public class UserService {
 	
@@ -16,8 +14,7 @@ public class UserService {
 	}
 
 	User addUser(User user) {
-		// here you can do some validations etc before saving the user
-		user.setCar(new Car());
+		
 		return userRepository.save(user);
 	}
 
