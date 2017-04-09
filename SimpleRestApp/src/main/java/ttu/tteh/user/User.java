@@ -15,8 +15,11 @@ import lombok.Setter;
 public class User {
 	@Id
 	@GeneratedValue
-	long id;
-	String userName;
-	int age;
-	String bio;
+	public long id;
+	public String userName;
+	public int age;
+	public String bio;
+	/* 
+	 * HULLULT HEA MÕTE TEHA VÄLJAD PUBLICUKS!!!!!!!!!!!!!!! !!! !!! 
+	 */
 }

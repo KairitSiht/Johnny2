@@ -19,18 +19,18 @@ export class people{
 	}
 
 	addUser() {
-        this.userData.userName=document.getElementById("userName").value;
-        this.userData.age=document.getElementById("age").value;
-        this.userData.bio=document.getElementById("bio").value;
+        this.userData.age = parseInt(this.userData.age);
+        console.log(this, this.userData);
 		let client = new HttpClient();
 
 		client.fetch('http://localhost:8080/users/add', {
+        //client.fetch('http://httpbin.org/post', {
 			'method': "POST",
 			'body': json(this.userData)
 		})
 			.then(response => response.json())
 			.then(data => {
-				console.log("Server saatis " + data.firstName);
+				console.log("Server saatis " + data.userName);
 		});
 
 		console.log("Method executed!")
