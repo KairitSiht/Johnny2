@@ -20,10 +20,6 @@ public class UserController {
 	@RequestMapping(value="/users/add", method=RequestMethod.POST,
 			consumes = "application/json")
 	public User addUser(@RequestBody User user) {
-		System.out.println(user.userName);
-		System.out.println(user.bio);
-		System.out.println(user.age);
-		System.out.println(user.id);
 		return userService.addUser(user);
 	}
 	

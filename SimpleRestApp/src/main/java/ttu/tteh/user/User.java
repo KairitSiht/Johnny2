@@ -17,7 +17,9 @@ public class User {
 	@GeneratedValue
 	public long id;
 	public String userName;
+	public String passWord;
 	public int age;
+	public String url;
 	public String bio;
 	/* 
 	 * HULLULT HEA MÕTE TEHA VÄLJAD PUBLICUKS!!!!!!!!!!!!!!! !!! !!! 
