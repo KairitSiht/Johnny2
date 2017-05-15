@@ -8,11 +8,12 @@
 </head>
 <body>
 
-<div> <form id="userform" submit.delegate="addUser()">
-        <input  class="username" id="userName" type="text" name="username" placeholder="USERNAME"> <p>
-         <input  class="username" id="age" type="text" name="age" placeholder="AGE"> <p>
-        <p><textarea id="bio"  style="background-color:yellow" rows="4" cols="35" name="bio" placeholder="MAKE YOUR FRIEND PROUD, ADD A FINE BIO"></textarea>  
-        <p><input type="submit" value="LET'S GO!" name="submit" class="myButton"></p>
+<div> <form id="userform" submit.delegate="logIn()"><!--UUS FN sisselogimiseks-->
+        <input  class="style" id="realName" type="text" name="realname"
+            value.bind="userData.realName" placeholder="MY NAME">
+        <input  class="style" id="passWord" type="password" name="password" placeholder="PASSWORD"
+                value.bind="userData.passWord"> <p>
+        <p><input type="submit" value="LOG IN!" name="submit" class="myButton"></p>
         
    
     </form></div>

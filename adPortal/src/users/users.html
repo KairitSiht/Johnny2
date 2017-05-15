@@ -1,20 +1,30 @@
 <template>
     <style>
         .user {
-            background-color: hsla(0,0%,0%,0.7);
+            background-color: hsla(0,0%,0%,0.45);
             display: inline-block;
             padding: 8px;
-            color: red;
+            color: #F82020;
+            border-radius: 160px;
+            padding: 50px; 
+            width: 250px;
+            height: 255px;
+            margin-left: 12px;
+            margin-top: 12px;
+            font-family: sans-serif;
+            font-weight: bold;
+            border-style: solid;
+            border-color: #F82020;
         }
     </style>
     
     
     <div class=user repeat.for="user of userList">
         <h2>${user.userName}</h2>
-        <p>ID: ${user.id}</p>
+        <p>Interested in:<br> ${user.interest}</p>
         <p>Age: ${user.age}</p>
-        <p>Facebook URL: <a href="${user.url}">${user.url}</a></p>
-        <p>${user.bio}</p>
+        <p>Facebook: <a href="${user.url}">${user.userName}'s account</a></p>
+        <p>About ${user.userName}:<br> ${user.bio}</p>
     </div>
     
 </template>

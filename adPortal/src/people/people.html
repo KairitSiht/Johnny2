@@ -1,20 +1,17 @@
 <template>
 
 	<form id="userform" submit.delegate="addUser()">
-        <!--
-siin mega kühvel nende saatmistega - > tglt meil pole vaja log in-is fn addUser()
-
-<div>
-         <input class="username" type="text" name="username" placeholder="USERNAME"> <p>
-    <input class="username" classtype="password" name="password" placeholder="PASSWORD"> <p>
-    <input class="myButton" type="submit" value="LOG IN" name="submit"><br>-->
-        <input  class="style" id="userName" type="text" name="username"
-            value.bind="userData.userName" placeholder="USERNAME"> <p>
+        <input  class="style" id="realName" type="text" name="realname"
+            value.bind="userData.realName" placeholder="MY NAME"> <p>
         <input  class="style" id="passWord" type="password" name="password" placeholder="PASSWORD"
                 value.bind="userData.passWord"> <p>
+        <input  class="style" id="userName" type="text" name="username"
+            value.bind="userData.userName" placeholder="FRIEND'S NAME"> <p>
+        <input  class="style" id="interest" type="text" name="interest"
+            value.bind="userData.interest" placeholder="INTERESTED IN"> <p>
          <input  class="style" id="age" type="number" name="age" placeholder="AGE"
                 value.bind="userData.age"> <p>
-         <input  class="style" id="FBUrl" type="url" name="url" placeholder="URL"
+         <input  class="style" id="FBUrl" type="url" name="url" placeholder="FACEBOOK URL"
                 value.bind="userData.url"> <p>
         <p><textarea id="bio" value.bind="userData.bio" style="background-color:yellow" rows="4" cols="35" name="bio" placeholder="MAKE YOUR FRIEND PROUD, ADD A FINE BIO"></textarea>  
         <p><input type="submit" value="LET'S GO!" name="submit" class="myButton"></p>

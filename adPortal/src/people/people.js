@@ -24,15 +24,22 @@ export class people{
 		let client = new HttpClient();
 
 		client.fetch('http://localhost:8080/users/add', {
-        //client.fetch('http://httpbin.org/post', {
 			'method': "POST",
 			'body': json(this.userData)
 		})
 			.then(response => response.json())
 			.then(data => {
-				console.log("Server saatis " + data.userName);
 		});
+        
+        alert('Account created ' + this.userData.realName + '!');
+        this.userData.age='';
+        this.userData.realName='';
+        this.userData.userName='';
+        this.userData.url='';
+        this.userData.passWord='';
+        this.userData.interest='';
+        this.userData.bio='';
+       
 
-		console.log("Method executed!")
 	}
 }
