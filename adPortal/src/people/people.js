@@ -6,8 +6,6 @@ export class people{
 	userList = []
 
 	constructor() {
-		this.appName = "adPortal"
-		this.count = 0
 	}
 
 	activate() {
@@ -39,6 +37,7 @@ export class people{
         this.userData.passWord='';
         this.userData.interest='';
         this.userData.bio='';
+        this.userData.pic='';
        
 
 	}

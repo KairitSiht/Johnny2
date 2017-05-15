@@ -30,7 +30,7 @@ public class SimpleRestAppApplicationTests {
 	public void contextLoads() {
 		testUser1 = new User();
 		testUser2 = new User();
-		testUser2.userName = "TU2";
+		testUser2.userName= "TU2";
 		testUser1.userName = "TU1";
 		testUser1.age = -2;
 		testUser2.age = 200;

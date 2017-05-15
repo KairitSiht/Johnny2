@@ -1,6 +1,8 @@
 package ttu.tteh.user;
 
 import java.util.List;
+import java.util.Optional;
+
 
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,15 @@ public class UserService {
 			return null;
 		}
 		return userRepository.save(user);
+	}
+	public Optional<User> logIn(String realName, String passWord){
+		if(realName == null || passWord == null){
+			throw new NullPointerException("Enter your account info");
+		}
+		return this.getAllUsers().stream()
+				.filter(s -> realName.equals(s.getRealName()))
+				.filter(s -> passWord.equals(s.getPassWord()))
+				.findFirst();
 	}
 
 	List<User> getAllUsers() {
