@@ -7,8 +7,8 @@
             color: #F82020;
             border-radius: 160px;
             padding: 50px; 
-            width: 250px;
-            height: 400px;
+            width: 270px;
+            height: 550px;
             margin-left: 12px;
             margin-top: 12px;
             font-family: sans-serif;
@@ -30,6 +30,11 @@
         <p>Age: ${user.age}</p>
         <p>Facebook: <a href="${user.url}">${user.userName}'s account</a></p>
         <p>About ${user.userName}:<br> ${user.bio}</p>
+        <form id="commentform" submit.delegate="addComment()">
+            <p><textarea id="comment" value.bind="userData.comment" style="background-color:yellow" rows="4" cols="35" name="bio" placeholder="LEAVE A COMMENT"></textarea>  
+            <br>
+            <input type="submit" value="COMMENT!" name="submit" class="myButton">
+        </form>
     </div>
     
 </template>

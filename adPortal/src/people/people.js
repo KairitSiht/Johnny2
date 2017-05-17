@@ -38,7 +38,6 @@ export class people{
         this.userData.interest='';
         this.userData.bio='';
         this.userData.pic='';
-       
 
 	}
 }

@@ -5,13 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 
-import lombok.Getter;
-import lombok.Setter;
-
-
 @Entity
-@Getter
-@Setter
 public class User {
 	@Id
 	@GeneratedValue
@@ -24,6 +18,8 @@ public class User {
 	public String url;
 	public String interest;
 	public String bio;
+	public String comment;
+
 	/*  
 	 * 
 	 * ise loodud getter ja setterid, sest
@@ -80,5 +76,11 @@ public class User {
 	}
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
+	}
+	public String getComment() {
+		return comment;
+	}
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 }

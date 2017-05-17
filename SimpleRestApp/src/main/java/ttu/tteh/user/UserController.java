@@ -2,8 +2,6 @@ package ttu.tteh.user;
 
 import java.util.List;
 import java.util.Optional;
-
-import ttu.tteh.user.logInRequest;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,7 +38,7 @@ public class UserController {
 	public User getUser(@PathVariable("id") long userId) {
 		return userService.getUserById(userId);
 	}
-	@RequestMapping(value = "/logIn", method=RequestMethod.POST,
+	/*@RequestMapping(value = "/logIn", method=RequestMethod.POST,
 			consumes="application/json")
 		public User logIn(@RequestBody logInRequest request){
 			Optional<User> findUser = userService.logIn(request.getPassWord(), request.getRealName());
@@ -51,8 +49,8 @@ public class UserController {
 			}else{
 				return findUser.get();
 			}
-		}
-		
+		}*/
+
 	
 	
 }
