@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-
 @Entity
 public class User {
 	@Id
@@ -18,7 +17,6 @@ public class User {
 	public String url;
 	public String interest;
 	public String bio;
-	public String comment;
 
 	/*  
 	 * 
@@ -77,10 +75,5 @@ public class User {
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
-	public String getComment() {
-		return comment;
-	}
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
+	
 }

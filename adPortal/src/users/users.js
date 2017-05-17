@@ -15,11 +15,11 @@ export class Home {
 			.then(response => response.json())
 			.then(users => this.userList = users)
     }
-	addComment() {
+	/*addComment() {
         console.log("no midagigi");
 		let client = new HttpClient();
-
 		client.fetch('http://localhost:8080/users/add', {
+            'mode': 'no-cors',
 			'method': "POST",
 			'body': json(this.userData.comment)
 		})
@@ -29,7 +29,7 @@ export class Home {
         
         this.userData.comment='';
         alert('Comment added!');
-        }
+        }*/
 
 }
 

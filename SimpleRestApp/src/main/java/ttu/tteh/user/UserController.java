@@ -1,12 +1,12 @@
 package ttu.tteh.user;
 
 import java.util.List;
-import java.util.Optional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
 public class UserController {
@@ -22,7 +22,6 @@ public class UserController {
 	public User addUser(@RequestBody User user) {
 		return userService.addUser(user);
 	}
-	
 	@RequestMapping(value="/users", method=RequestMethod.GET)
 	public List<User> getAllUsers() {
 		List<User> users = userService.getAllUsers();

@@ -20,6 +20,22 @@
         img{
             border-radius: 160px;
         }
+        .msg{
+           background-color: hsla(0,0%,0%,0.45);
+            display: inline-block;
+            padding: 8px;
+            color: #F82020;
+            border-radius: 160px;
+            padding: 50px; 
+            width: 250px;
+            height: 90px;
+            margin-left: 12px;
+            margin-top: 12px;
+            font-family: sans-serif;
+            font-weight: bold;
+            border-style: solid;
+            border-color: #F82020; 
+        }
     </style>
 <html>
 <head>
@@ -29,11 +45,16 @@
 </head>
 <body>
 
-<div class=user repeat.for="user of userList">
-    <p>Last comment about ${user.userName}:</p>
-     <p>${user.comment}</p>
-    </div>
 
+ <p class="msg">${commentator}  ${comment}</p>
+     <form id="commentform" submit.delegate="addComment()" >
+            <input  class="style" id="commentator" type="text" name="commentator"
+            value.bind="commentator" placeholder="MY NAME"> <p>
+            <p><textarea id="comment" value.bind="comment" style="background-color:yellow" rows="4" cols="35" name="comment" placeholder="LEAVE A COMMENT"></textarea>  
+            <br>
+            <input type="submit" value="COMMENT!" name="submit" class="myButton">
+                  
+        </form>
 
 </body>
 </html> 
